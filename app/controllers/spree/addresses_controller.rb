@@ -59,18 +59,22 @@ class Spree::AddressesController < Spree::StoreController
   end
 
   private
-    def address_params
-      params[:address].permit(:address,
-                              :firstname,
-                              :lastname,
-                              :address1,
-                              :address2,
-                              :city,
-                              :state_id,
-                              :zipcode,
-                              :country_id,
-                              :phone
-                             )
-    end
+  def address_params
+    params[:address].permit(:address,
+                            :firstname,
+                            :lastname,
+                            :address1,
+                            :address2,
+                            :city,
+                            :state_id,
+                            :zipcode,
+                            :country_id,
+                            :phone
+    )
+  end
+
+  def account_path
+    main_app.edit_user_registration_path
+  end
 end
 

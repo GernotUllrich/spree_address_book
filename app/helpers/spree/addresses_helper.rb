@@ -11,9 +11,5 @@ module Spree::AddressesHelper
       end
     end
   end
-
-  def account_path
-    main_app.edit_user_registration_path
-  end
 end
 
